@@ -1,0 +1,243 @@
+body {
+    background-color: #ECEFF4;
+    font-size: 13px;
+}
+
+#ab {
+    color: #ECEFF4;
+    background-color: #222D33;
+    border-radius: 10px 0px 0px 0px;
+    overflow: hidden;
+    position: relative;
+}
+
+ul {
+    list-style: none;
+    padding-left: 16px;
+}
+
+li input[type='checkbox'] {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+    
+}
+
+li label {
+    display: block;
+    cursor: pointer;
+}
+
+li ul {
+    overflow: hidden;
+    height: 0;
+}
+
+li ul a {
+    display: block;
+}
+
+input[type='checkbox']:checked+ul {
+    height: auto;
+    
+    
+}
+
+#hover:hover {
+    font-size: 17px;
+    text-decoration: none;
+    color: #ECEFF4;
+}
+
+.up {
+    margin: 0 auto;
+    display: inline-block;
+    width: 100%;
+}
+
+.entrada {
+    text-align: center;
+    margin-top: 9px;
+}
+
+.entrada input {
+    margin-bottom: 7px;
+    padding: 6px;
+    border-radius: 7px;
+}
+
+.numero2 {
+    width: 11%;
+    text-align: center;
+}
+
+.entrada .numero {
+    width: 75%;
+    height: 15px;
+    border-radius: 6px;
+    text-align: center;
+}
+
+.menu {
+    margin-top: 0;
+}
+
+.opciones {
+    margin: 2px;
+}
+
+.opciones label {
+    width: 285px;
+    display: inline-block;
+}
+
+.opcion {
+    margin-left: 22px;
+    width: 320px;
+}
+
+.opcion li {
+    margin: 6px 0;
+}
+
+.boton button {
+    border-radius: 3px;
+    padding: 3px 30px;
+    background-color: #0d77b4;
+    color: #ECEFF4;
+}
+
+#zxc {
+    display: none;
+}
+
+.all {
+    margin-top: 0px;
+    display: flex;
+    justify-content: center;
+}
+
+#iframe1 {
+    border-radius: 0px 0px 10px 0px;
+    border: none;
+}
+
+#iframe2 {
+
+    border: none;
+}
+
+.elementos {
+    width: 325px;
+    height: 625px;
+}
+
+.collapsible {
+    background-color: #ECEFF4;
+
+    /* border: 2px solid #ECEFF4;*/
+    border-radius: 1.5px;
+    color: #222D33;
+    outline: none;
+    font-size: 1rem;
+    cursor: pointer;
+
+    text-align: center;
+    position: relative;
+}
+
+.collapsible:hover {
+    background-color: #222D33;
+}
+
+/*  @media (max-width: 700px) {
+    .all {
+        flex-direction: column;
+    }
+}*/
+
+.modalContainer {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modalContainer .modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid lightgray;
+    border-top: 10px solid #222D33;
+    width: 50%;
+}
+
+.modalContainer .close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.modalContainer .close:hover,
+.modalContainer .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.2s
+}
+
+/*
+@-webkit-keyframes animatezoom {
+    from {
+        -webkit-transform: scale(0)
+    }
+
+    to {
+        -webkit-transform: scale(1)
+    }
+}
+
+@keyframes animatezoom {
+    from {
+        transform: scale(0)
+    }
+
+    to {
+        transform: scale(1)
+    }
+}
+*/
+.ghj[type="radio"] {
+    -webkit-appearance: checkbox;
+    /* Chrome, Safari, Opera */
+    -moz-appearance: checkbox;
+    /* Firefox */
+    -ms-appearance: checkbox;
+    /* not currently supported */
+    
+    
+}
+
+.file-input .inputfile {
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+
+}
+
+#zxc1 {
+    display: none;
+}

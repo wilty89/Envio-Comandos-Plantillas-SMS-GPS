@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Envio de comandos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+    
+</style>
+<!-script lang="javascript" src="xlsx.full.min.js">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.15.1/xlsx.full.min.js"></script>
+
+
+    <body>
+        <div id="tvesModal" class="modalContainer animate">
+            <div class="modal-content">
+                <span class="close"> &#935; </span>
+                <h4>Envio masivo comando masivo.</h4>
+
+                <input type="file" id="fileElem" multiple accept="/*" style="display:none"
+                    onchange="handleFiles(this.files)">
+                <button id="fileSelect">Subir Archivo</button>
+                <script>
+                    const fileSelect = document.getElementById("fileSelect"),
+                        fileElem = document.getElementById("fileElem");
+                    fileSelect.addEventListener(
+                        "click",
+                        function (e) {
+                            if (fileElem) {
+                                fileElem.click();
+                            }
+                        },
+                        false
+                    );
+
+
+
+
+                </script>
+                <div>
+
+                    <ul>
+
+                        <li class="opciones"><input type="radio" name="comando" id="add782" value=""><input id="add82"
+                                type="text"></li>
+                    </ul>
+
+
+                </div>
+            </div>
+
+            <script>
+
+            </script>
+        </div>
+        <div class="all">
+            <div class="elementos" id="ab">
+                <div class="entrada">
+                    <input class="numero" id="numero" type="text" placeholder="Numero dispositivo">
+                    <div id="zxc">
+                        <input type="text" name="velo2" id="veloinput" maxlength="3" class="numero2" placeholder="KM/h">
+                    </div>
+                    <div id="zxc1">
+                        <input type="text" name="" id="gops" maxlength="10" class="" placeholder="numero">
+                    </div>
+                    <div class="boton">
+                        <button class="boton1" id="botton1" type="button" name="enviar">Enviar</button>
+                        <button class="boton1" id="btnModal" type="button" name="Masivo">opciones</button>
+                    </div>
+                </div>
+
+
+                <input type="radio" id="seer2" name="qwwer" class="ghj" checked> <label for="seer2">Servidor 1</label>
+                <input type="radio" id="seer" name="qwwer" class="ghj"> <label for="seer">Servidor 2</label>
+                <!--input type="radio" id="seer3" name="qwwer" class="ghj"-->
+                <!--label for="seer2">clickatell</label-->
+
+
+                <nav class="menu">
+                    <ul>
+                        <li class="opciones">
+                            <label class="collapsible" for="one" id="hover">CAL/AMP </label>
+                            <input type="checkbox" id="one" onclick="chbx(this)">
+                            <ul id="content" class="opcion">
+                                <li><input type="radio" name="comando" value="!R3,1,1" id="forze" checked>
+                                    <label for="forze">Forze</label></li>
+                                <li><input type="radio" name="comando" id="Reinicio" value="!R3,70,0">
+                                    <label for="Reinicio">Reinicio</label></li>
+                                <li><input type="radio" name="comando" id="conectandoPuls" value="!R3,49,129">
+                                    <label for="conectandoPuls">Conectando Puls</label></li>
+                                <li><input type="radio" name="comando" id="limpiar" value="!R3,5,0">
+                                    <label for="limpiar">Vaciar Buffer</label></li>
+                                <li><input type="radio" name="comando" id="apn7"
+                                        value="!R1,2306,0,internet.ideasclaro.com.do">
+                                    <label for="apn7">APN Claro</label></li>
+                                <li><input type="radio" name="comando" id="apn2" value="!R1,2306,0,orangenet.com.do">
+                                    <label for="apn2">APN Altice</label></li>
+                                <li><input type="radio" name="comando" id="bof2" value="!R3,20,0">
+                                    <label for="bof2">Enciende el GPS Hard Reset</label></li>
+                                <li><input type="radio" name="comando" id="bof4" value="!R3,37,0">
+                                    <label for="bof4">Reinicia o enciende el GPRS o GSM</label></li>
+                                <div id="select7">
+
+                                </div>    
+
+                                
+                            </ul>
+                        </li>
+                        <li class="opciones">
+                            <label class="collapsible" for="two" id="hover">QUECLINK GV-300</label>
+                            <input class="collapsible" type="checkbox" id="two" onclick="chbx(this)">
+                            <ul id="content" class="opcion">
+                                <li><input type="radio" name="comando" id="forzarTransmicion"
+                                        value="AT+GTRTO=gv300,1,,0,,,,FFFF$">
+                                    <label for="forzarTransmicion">Forzar Transmicion</label></li>
+                                <li><input type="radio" name="comando" id="reinicio1"
+                                        value="AT+GTRTO=gv300,3,,0,,,,FFFF$">
+                                    <label for="reinicio1">Reiniciar</label></li>
+                                <li><input type="radio" name="comando" id="ActivarOdometer"
+                                        value="AT+GTCFG=gv300,gv300,gv300,1,1278.6,,,77,0,,3003,1,1,0,300,1,1,0,1,C,0,FFFF$">
+                                    <label for="ActivarOdometer">Activar odometer</label></li>
+                                <li><input type="radio" name="comando" id="avl"
+                                        value="AT+GTSRI=gv300,3,,1,37.59.77.123,53107,37.59.77.123,53107,,10,1,0,0,,,FFFF$">
+                                    <label for="avl">Pasar a AVL</label></li>
+                                <li><input type="radio" name="comando" id="avl3"
+                                        value="AT+GTSRI=gv300,3,,1,64.120.108.24,20479,64.120.108.24,20479,,10,1,0,0,,,FFFF$">
+                                    <label for="avl3">Pasar a GURTAM</label></li>
+                                <li><input type="radio" name="comando" id="tobo"
+                                        value="AT+GTSRI=gv300,3,,2,104.209.184.116,4501,104.209.184.116,4501,,0,0,0,1,,,FFFF$">
+                                    <label for="tobo">Pasar a TOBO</label></li>
+                                <li><input type="radio" name="comando" id="encendido1"
+                                        value="AT+GTOUT=gv300,1,0,0,0,0,0,,,,0,,,,,,,FFFF$">
+                                    <label for="encendido1">Encendido Remoto</label></li>
+                                <li><input type="radio" name="comando" id="apagado1"
+                                        value="AT+GTOUT=gv300,0,0,0,0,0,0,,,,0,,,,,,,FFFF$">
+                                    <label for="apagado1">Apagado Remoto</label></li>
+                                <li><input type="radio" name="comando" id="Velocidad" value="">
+                                    <label for="Velocidad">Cambiar Velocidad Buzzer</label></li>
+                                <li><input type="radio" name="comando" id="Velocidadg"
+                                        value="AT+GTSPD=gv300,1,0,0,10,30,2,0,50,1,0,,,,,,,,,,,FFFF$">
+                                    <label for="Velocidadg">Prueba Velocidad Buzzer</label></li>
+                            </ul>
+                        </li>
+                        <li class="opciones">
+                            <label class="collapsible" for="three" id="hover">QUECLINK GV-55</label>
+                            <input type="checkbox" id="three" onclick="chbx(this)">
+                            <ul id="content" class="opcion">
+                                <li><input type="radio" name="comando" value="AT+GTRTO=gv55,1,,0,,,,FFFF$" id="forze2">
+                                    <label for="forze2">Forze</label></li>
+                                <li><input type="radio" name="comando" id="Reinicioq"
+                                        value="AT+GTRTO=gv55,3,,0,,,,FFFF$">
+                                    <label for="Reinicioq">Reinicio</label></li>
+                                <li><input type="radio" name="comando" id="buffer" value="AT+GTRTO=gv55,D,,0,,,,FFFF$">
+                                    <label for="buffer">Borrar buffer</label></li>
+                                <li><input type="radio" name="comando" id="avl."
+                                        value="AT+GTSRI=gv55,3,,1,37.59.77.123,53107,37.59.77.123,53107,,10,1,0,0,,,FFFF$">
+                                    <label for="avl.">Pasar a AVL</label></li>
+                                <li><input type="radio" name="comando" id="tobo."
+                                        value="AT+GTSRI=gv55,3,,2,104.209.184.116,4501,104.209.184.116,4501,,0,0,0,1,,,FFFF$">
+                                    <label for="tobo.">Pasar a TOBO</label></li>
+                                <li><input type="radio" name="comando" id="Apagado7"
+                                        value="AT+GTOUT=gv55,1,0,0,0,0,0,,,,0,,,,,,,FFFF$">
+                                    <label for="Apagado7">Apagado</label></li>
+                                <li><input type="radio" name="comando" id="encendido2"
+                                        value="AT+GTOUT=gv55,0,0,0,0,0,0,,,,0,,,,,,,FFFF$">
+                                    <label for="encendido2">Encendido</label></li>
+                            </ul>
+                        </li>
+                        <li class="opciones">
+                            <label class="collapsible" for="four" id="hover">QUECLINK GMT-100</label>
+                            <input type="checkbox" id="four" onclick="chbx(this)">
+                            <ul id="content" class="opcion">
+                                <li><input type="radio" name="comando" id="forzeg"
+                                        value="AT+GTRTO=gmt100,1,,0,,,,FFFF$">
+                                    <label for="forzeg">Forze</label></li>
+                                <li><input type="radio" name="comando" id="Reiniciog"
+                                        value="AT+GTRTO=gmt100,3,,,,,,FFFF$">
+                                    <label for="Reiniciog">Reinicio</label></li>
+                            </ul>
+                        </li>
+                        <li class="opciones">
+                            <label class="collapsible" for="five" id="hover">QUECLINK GL-300</label>
+                            <input type="checkbox" id="five" onclick="chbx(this)">
+                            <ul id="content" class="opcion">
+                                <li><input type="radio" name="comando" id="forze90"
+                                        value="AT+GTRTO=gl300,1,,0,,,,FFFF$">
+                                    <label for="forze90">Forze</label></li>
+                                <li><input type="radio" name="comando" id="Reinicio90"
+                                        value="AT+GTRTO=gl300,3,,,,,,FFFF$">
+                                    <label for="Reinicio90">Reinicio</label></li>
+                                <li><input type="radio" name="comando" id="Reinicio89"
+                                        value="AT+GTFRI=gl300,1,1,,,0000,0000,30,30,30,30,1F,1000,1000,1,5,50,5,40,0,FFFF$">
+                                    <label for="Reinicio89">Migrar a tobo</label></li>
+                                <li><input type="radio" name="comando" id="Reinicio67"
+                                        value="AT+GTQSS=gl300,internet.ideasclaro.com.do,,,3,,1,104.209.184.116,4503,104.209.184.116,4503,,0,0,,,FFFF$">
+                                    <label for="Reinicio67">APN</label></li>
+                            </ul>
+                        </li>
+                        <li class="opciones">
+                            <label class="collapsible" for="six" id="hover">Benway BW09</label>
+                            <input type="checkbox" id="six" onclick="chbx(this)">
+                            <ul id="content" class="opcion">
+
+                                <li><input type="radio" name="comando" id="forq" value="#6666#FactoryALL#">
+                                    <label for="forq">Restore factory</label></li>
+                                <li><input type="radio" name="comando" id="IPBW" value="#6666#IP#104.209.184.116#4700#">
+                                    <label for="IPBW"> IP - Ignicion </label></li>
+                                <li><input type="radio" name="comando" id="IPBW2"
+                                        value="#6666#IP#104.209.184.116#4750#">
+                                    <label for="IPBW2">IP - Movimiento </label></li>
+                                <li><input type="radio" name="comando" id="distanceBW" value="#6666#SST#60#">
+                                    <label for="distanceBW">TIEMPO DETENIDO</label></li>
+                                <li><input type="radio" name="comando" id="MOVIBW" value="#6666#SMT#120#">
+                                    <label for="MOVIBW">TIEMPO EN MOVIMIENTO</label></li>
+                                <li><input type="radio" name="comando" id="APNBW"
+                                        value="#6666#sapn#internet.ideasclaro.com.do#####">
+                                    <label for="APNBW">APN setting</label></li>
+                                <li><input type="radio" name="comando" id="zoneBW" value="#6666#STZ#E0#">
+                                    <label for="zoneBW">ZONA HORARIA</label></li>
+
+                                <li><input type="radio" name="comando" id="add2" value="#6666#lowbat#40#">
+                                    <label for="add2">EVENTO BATERIA BAJA</label></li>
+                                <li><input type="radio" name="comando" id="ReinicioBW" value="#6666#Reset#">
+                                    <label for="ReinicioBW">Re-start device</label></li>
+
+                                <li><input type="radio" name="comando" id="forq" value="#6666#GL#">
+                                    <label for="forq">Forze</label></li>
+                                <li><input type="radio" name="comando" id="forq1" value="#6666#capn#">
+                                    <label for="forq1">Check APN</label></li>
+
+                                <li><input type="radio" name="comando" id="forq4" value="STATUS#">
+                                    <label for="forq4">STATUS</label></li>
+                                <li><input type="radio" name="comando" id="forq5" value="param#">
+                                    <label for="forq5">Parameters</label></li>
+                                <li><input type="radio" name="comando" id="add" value="#6666#GA#">
+                                    <label for="add">Getting Address</label></li>
+                            </ul>
+                        </li>
+                        <li class="opciones">
+                            <label class="collapsible" for="seven" id="hover">Personalizado</label>
+                            <input type="checkbox" id="seven" onclick="chbx(this)">
+
+                            <ul id="content" class="opcion">
+
+                                <li><input type="radio" name="comando"  id="add78" value=""><input id="add8" type="text" name="comando">
+
+                                </li>
+                                <li ><input type="radio" name="comando" id="hola" value="">
+                                    <label for="hola"> R0 </label>
+                                </li>
+                                <li ><input type="radio" name="comando" id="hola2" value="">
+                                    <label for="hola2"> R5 </label>
+                                </li>
+                                <li><input type="radio" name="comando" id="hola3" value="">
+                                    <label for="hola3"> RJ </label>
+                                </li>
+                                <li ><input type="radio" name="comando" id="hola4" value="">
+                                    <label for="hola4"> R4 </label>
+                                </li>
+
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <iframe class="elementos" id="iframe1" name="iframe1"></iframe>
+            <iframe class="elementos" id="iframe2" name="iframe2"></iframe>
+        </div>
+    </body>
+    <script type="" src="scripts.js"></script>
+
+    <script>
+    </script>
+
+
+</html>
